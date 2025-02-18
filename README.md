@@ -1,66 +1,28 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Dự án Bán Hàng Laravel 11
+Mô Tả Dự Án
+Dự án này là một hệ thống bán hàng trực tuyến được xây dựng bằng Laravel 11, sử dụng Laravel Breeze để xác thực người dùng và MySQL làm cơ sở dữ liệu. Giao diện được thiết kế bằng HTML & CSS thuần, tập trung vào trải nghiệm người dùng đơn giản và hiệu quả.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Chức Năng Chính
+1. Xác Thực Người Dùng
+Đăng ký tài khoản: Người dùng có thể đăng ký bằng email và mật khẩu.
+Đăng nhập/Đăng xuất: Sau khi đăng ký, người dùng có thể đăng nhập vào hệ thống và đăng xuất khi không sử dụng.
+Middleware bảo vệ route: Chỉ những người dùng đã đăng nhập mới có thể truy cập vào các trang giỏ hàng, đặt hàng, thanh toán và lịch sử đơn hàng.
+2. Sản Phẩm
+Hiển thị danh sách sản phẩm: Trang chủ hiển thị tất cả các sản phẩm có sẵn trong cửa hàng.
+Lọc sản phẩm theo danh mục: Người dùng có thể chọn danh mục để xem các sản phẩm liên quan.
+Trang chi tiết sản phẩm: Khi nhấp vào một sản phẩm, hệ thống sẽ hiển thị trang chi tiết với thông tin mô tả, giá cả và nút thêm vào giỏ hàng.
+3. Giỏ Hàng
+Thêm sản phẩm vào giỏ hàng: Người dùng có thể thêm sản phẩm vào giỏ hàng từ trang danh sách hoặc trang chi tiết sản phẩm.
+Cập nhật số lượng: Trong giỏ hàng, người dùng có thể thay đổi số lượng sản phẩm đã thêm.
+Xóa sản phẩm khỏi giỏ hàng: Cho phép người dùng xóa sản phẩm không mong muốn khỏi giỏ hàng.
+Tính tổng giá trị đơn hàng: Hệ thống tự động tính tổng tiền dựa trên các sản phẩm trong giỏ hàng.
+4. Đặt Hàng (Đang Triển Khai)
+Nhập thông tin đặt hàng: Người dùng cần nhập thông tin cá nhân (tên, địa chỉ, số điện thoại) để đặt hàng.
+Xác nhận đơn hàng: Sau khi điền thông tin, người dùng nhấn nút "Xác nhận đặt hàng" để tiếp tục sang bước thanh toán.
+5. Thanh Toán (Đang Triển Khai)
+Tích hợp PayPal: Khi người dùng nhấn "Xác nhận đặt hàng", hệ thống sẽ chuyển hướng đến trang thanh toán PayPal.
+Hiển thị thông báo sau khi thanh toán: Nếu thanh toán thành công, người dùng sẽ nhận được thông báo xác nhận.
+Tích hợp VNPay (Dự kiến bổ sung sau)
+6. Lịch Sử Đơn Hàng (Chưa Làm)
+Hiển thị danh sách đơn hàng đã đặt: Người dùng có thể xem lại các đơn hàng trước đó của mình.
+Chi tiết đơn hàng: Nhấn vào một đơn hàng để xem thông tin chi tiết về sản phẩm, giá cả và trạng thái đơn hàng.
