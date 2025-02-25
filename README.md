@@ -2,7 +2,7 @@
 
 ## 📝 Giới Thiệu
 Dự án này là một hệ thống bán hàng trực tuyến được xây dựng bằng **Laravel 11**, sử dụng **Laravel Breeze** để xác thực người dùng và **MySQL** làm cơ sở dữ liệu.  
-Giao diện được thiết kế bằng **HTML & CSS thuần**, tập trung vào trải nghiệm người dùng đơn giản và hiệu quả.  
+Giao diện được thiết kế bằng **HTML & CSS**, tập trung vào trải nghiệm người dùng đơn giản và hiệu quả.  
 
 ---
 
